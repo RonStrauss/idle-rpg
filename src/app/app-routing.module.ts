@@ -3,7 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './components/main/main.component';
 
 const routes: Routes = [
-  {path:'',pathMatch:'full',component:MainComponent}
+  {path:'info',pathMatch:'full',component:MainComponent},
+  {path:'stats',pathMatch:'full',component:MainComponent},
+  {path:'equipment',pathMatch:'full',component:MainComponent},
+  {path:'',pathMatch:'full',component:MainComponent},
 ];
 
 @NgModule({

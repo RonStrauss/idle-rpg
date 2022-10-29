@@ -2,10 +2,10 @@
   <div class="left">
     <span>Idle RPG</span>
   </div>
-  <div class="mid">
-    <a routerLink="/equipment">Equipment</a>
-    <a routerLink="/info">Info</a>
-    <a routerLink="/stats">Stats</a>
+  <div class="mid" #mid>
+    <a routerLink="/equipment" (click)="changeActiveLink(mid,'first')">Equipment</a>
+    <a routerLink="/info" (click)="changeActiveLink(mid,'second')">Info</a>
+    <a routerLink="/stats" (click)="changeActiveLink(mid,'third')">Stats</a>
   </div>
   <div class="right"></div>
   <!-- <div class="wrapper">

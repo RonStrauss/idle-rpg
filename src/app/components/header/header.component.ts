@@ -12,4 +12,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  changeActiveLink(mid:HTMLDivElement,value:string){
+    mid.classList.remove('first','second','third')
+    mid.classList.add(value)
+  }
+
 }

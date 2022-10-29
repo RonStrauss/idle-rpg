@@ -1,27 +1,50 @@
-mat-toolbar{
-    justify-content: space-between;
+mat-toolbar {
+  justify-content: space-between;
 }
 
-.mid{
-    display: flex;
-    gap: 2em;
-    user-select: none;
-    position: relative;
-    padding: 0.2em;
-    & a{
-        cursor: pointer;
-        color:white;
-        text-decoration: none;
-        transition: .25s;
-    }
+.mid {
+  display: flex;
+  gap: 2em;
+  user-select: none;
+  position: relative;
+  padding: 0.2em;
+  & a {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transition: 0.25s;
 
-    &::after{
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 40%;
-        background: #FFF;
-        height: 0.2em;
+    &:hover{
+        background-color: rgba($color: #000000, $alpha: 0.1);
     }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    transition: 0.3s;
+    background: #fff;
+    height: 0.2em;
+    width: 100%;
+    opacity: 0;
+  }
+
+  &.first::after {
+    left: 0;
+    width: 40%;
+    opacity: 1;
+  }
+
+  &.second::after {
+    left: 50%;
+    width: 19%;
+    opacity: 1;
+  }
+
+  &.third::after {
+    left: 80%;
+    width: 19%;
+    opacity: 1;
+  }
 }

@@ -1,1 +1,15 @@
-<p>equipment works!</p>
+<div class="wrapper">
+    <div class="left">
+        <h2>Equipped</h2>
+        <mat-divider></mat-divider>
+        <div class="grid">
+            <div class="square" *ngFor="let i of equipmentGrid" [ngClass]="{equippable: i}">{{i}}</div>
+        </div>
+    </div>
+    <div class="right">
+        <h2>Inventory</h2>
+        <div class="grid grid-inventory"><div class="square-inventory" *ngFor="let i of inventoryGrid">
+            <img [src]="i.src" *ngIf="i"><span>{{i.qty | currency:'':'':'1.0'}}</span>
+        </div></div>
+    </div>
+</div>

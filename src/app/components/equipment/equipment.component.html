@@ -9,7 +9,7 @@
     <div class="right">
         <h2>Inventory</h2>
         <div class="grid grid-inventory"><div class="square-inventory" *ngFor="let i of inventoryGrid">
-            <img [src]="i.src" *ngIf="i"><span>{{i.qty | currency:'':'':'1.0'}}</span>
+           <span class="title">{{i.title}}</span> <img [src]="i.src" *ngIf="i" [matTooltip]="i.toolTip ? i.toolTip : ''"><span class="quantity" [ngStyle]="{'bottom.em': i.qty < 1000000000 ? -0.5 : 0}"  *ngIf="i?.qty > 1">{{i.qty | currency:'':'':'1.0'}}</span>
         </div></div>
     </div>
 </div>

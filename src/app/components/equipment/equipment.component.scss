@@ -58,6 +58,13 @@
       height: 1.8em;
       word-break: break-all;
       line-height: 10px;
+
+      &.title{
+        top: 0;
+      }
+      &.quantity{
+        bottom:0;
+      }
     }
   }
 }

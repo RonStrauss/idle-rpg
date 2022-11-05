@@ -8,7 +8,7 @@ import iconsUrls from 'src/app/icons-urls';
 })
 export class EquipmentComponent implements OnInit {
   equipmentGrid = new Array(40).fill('');
-  inventoryGrid = new Array(120).fill('')
+  inventoryGrid = new Array(36).fill('')
 
   constructor() {}
 
@@ -48,10 +48,15 @@ export class EquipmentComponent implements OnInit {
 
     this.inventoryGrid = this.inventoryGrid.map((_,i)=>{
       if (!i){
-        return {src:iconsUrls.coins,qty:1000000000}
+        return {src:iconsUrls.coins,qty:100000,toolTip:'Money!', title:'Coins'}
       }
       if (i === 1){
-        return {src:iconsUrls.sword}
+        return {src:iconsUrls.sword,qty:1,toolTip:'+3 Attack',title:'Iron Sword'}
+      }
+      
+      if (i === 4){
+        return {src:iconsUrls.armor,qty:1,toolTip:'+5 Defense',title:'Iron Armor'}
+
       }
       return _
     })
